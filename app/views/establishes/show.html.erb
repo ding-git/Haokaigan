@@ -1,0 +1,23 @@
+
+<h1></h1>
+
+<div class="xr xpt">
+	<div class="xlr" id="nobody">
+		<%= render 'faq' %>
+	</div>
+
+
+	<div class="xjr">
+		<% @chapter.each do |chapter| %>
+		<li>
+			<%= link_to chapter.name, new_establish_path(:id => params[:id],:more => chapter.id), :remote => true, :id => "new_user_link" %>
+		</li>
+		<% end %>
+	</div>
+</div>
+<div class="edit">
+	<%= link_to 'Edit', edit_establish_path(@establish) %> |
+	<%= link_to 'Back', establishes_path %>
+</div>
+
+

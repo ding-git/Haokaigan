@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/Fixtures.html
+
+one:
+  establish_id: 1
+  name: MyString
+  description: MyString
+
+two:
+  establish_id: 1
+  name: MyString
+  description: MyString
