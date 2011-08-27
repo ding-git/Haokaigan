@@ -15,8 +15,13 @@ class EstablishesController < ApplicationController
   def show
     @establish      = Establish.find(params[:id])
     @chapter        = @establish.chapter
-    @chapter_one    = @chapter.find(2)
-    @note           = @chapter_one.note
+    unless @establish.chapter.empty?
+      @chapter_one    = @chapter.first
+      @note           = @chapter_one.note
+    else
+      @chapter_one    = []
+      @note           = []
+    end
 
 
     respond_to do |format|
@@ -29,10 +34,12 @@ class EstablishesController < ApplicationController
   # GET /establishes/new.json
   def new
     @establish = Establish.new
-    @unit       = Establish.find(params[:id])
-    @chapter        = @unit.chapter
-    @chapter_one    = @chapter.find(params[:more])
-    @note           = @chapter_one.note
+    unless params[:id].nil?
+      @unit       = Establish.find(params[:id])
+      @chapter        = @unit.chapter
+      @chapter_one    = @chapter.find(params[:more])
+      @note           = @chapter_one.note
+    end
     
     respond_to do |format|
       format.html # new.html.erb
