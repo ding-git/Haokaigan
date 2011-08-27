@@ -84,7 +84,7 @@ class EstablishesController < ApplicationController
 
     respond_to do |format|
       if @establish.update_attributes(params[:establish])
-        format.html { redirect_to @establish, notice: 'Establish was successfully updated.' }
+        format.html { redirect_to admin_index_path, notice: 'Establish was successfully updated.' }
         format.json { head :ok }
       else
         format.html { render action: "edit" }

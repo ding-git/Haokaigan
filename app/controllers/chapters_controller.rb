@@ -60,7 +60,7 @@ class ChaptersController < ApplicationController
 
     respond_to do |format|
       if @chapter.update_attributes(params[:chapter])
-        format.html { redirect_to @chapter, notice: 'Chapter was successfully updated.' }
+        format.html { redirect_to :back, notice: 'Chapter was successfully updated.' }
         format.json { head :ok }
       else
         format.html { render action: "edit" }

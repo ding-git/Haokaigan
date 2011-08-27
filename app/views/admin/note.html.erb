@@ -1,0 +1,51 @@
+<%= render 'tool' %>
+
+<p id="notice"><%= notice %></p>
+<% @establish.each do |establish| %>
+
+<% if @chapter_s == true %>
+<h1>编辑:  <%= link_to establish.name, admin_chapter_path(:id => establish.id) %></h1>
+<% end %>
+
+<% if @note_s == true %>
+<h1>编辑:  <%= link_to establish.name, admin_note_path(:id => params[:id],:chapter => establish.id) %></h1>
+<% end %>
+
+<%= form_for(establish) do |f| %>
+  <% if establish.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(establish.errors.count, "error") %> prohibited this establish from being saved:</h2>
+
+      <ul>
+      <% establish.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :chapter_id %><br />
+    <%= f.number_field :chapter_id %>
+  </div>
+  <div class="field">
+    <%= f.label :que %><br />
+    <%= f.text_field :que %>
+  </div>
+  <div class="field">
+    <%= f.label :ans %><br />
+    <%= f.text_area :ans,:rows => 3 %>
+  </div>
+  <div class="field">
+    <%= f.label :img_url %><br />
+    <%= f.text_field :img_url %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+
+<% end %>
+
+------------------
+
+<% end %>

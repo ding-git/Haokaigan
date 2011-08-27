@@ -6,6 +6,8 @@ Haokaigan::Application.routes.draw do
   resources :establishes
   
   match '/admin/index' => 'admin#index'
+  match '/admin/chapter' => 'admin#chapter'
+  match '/admin/note' => 'admin#note'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
