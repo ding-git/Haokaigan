@@ -6,26 +6,22 @@
 	   });
 	});
 </script>
+
 <dl id="faq">
 	<% @note.each do |note| %>
 	<dt><h1><%= note.que %></h1></dt>
 	<dd>
 	<div class="xkq">
-	<%= link_to '解答','#',:class => 'xhq_ans' %>
+		<%= link_to '解答','#',:class => 'xhq_ans' %>
 	</div>
-	&nbsp;&nbsp;<%= note.ans %>
+	<div class="xiq">
+		<%= note.ans %>		
+	</div>
+
 	</dd>
 	<% end %>
-	<dd>
-	<div class="xkq">
-	<%= link_to '下载','#',:class => 'xhq_down' %>
-	</div>
-	&nbsp;&nbsp;<span id="leyouyou">lala</span>
-	</dd>
-	<dd>
-		<div class="xkq">
-		<%= link_to  '知乎', '#',:class => 'xhq_zhihu' %>
-		</div>
-		&nbsp;&nbsp;
-	</dd>
+
+	<%= render 'tips' %>
+
+	<%= render 'zhihu' %>
 </dl>

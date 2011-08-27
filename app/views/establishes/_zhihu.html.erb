@@ -1,0 +1,13 @@
+<% if @zhihu == true %>
+	<dd>
+		<div class="xkq">
+		<%= link_to  '知乎', '#',:class => 'xhq_zhihu' %>
+		</div>
+	
+		<div class="xiq">
+		<% 3.times do |xx| %>
+		<li><%= link_to '知乎'+xx.to_s,'xx' %></li>
+		<% end %>
+		</div>
+	</dd>
+<% end %>

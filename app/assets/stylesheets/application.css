@@ -29,6 +29,12 @@ body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, 
     margin: 0;
     padding: 0;
 }
+
+
+li {
+    display: block;
+}
+
 a {
     color: #D09826;
 }
@@ -121,29 +127,9 @@ div {
     float: left;
 }
 
-
-
-#csNav li a, #csNav #csUser, #csNav #csSession {
-    border-right: 1px solid #3C3437;
-    color: #888888;
-    display: block;
-    line-height: 40px;
-    padding: 0 10px;
-    text-decoration: none;
-    text-transform: lowercase;
-}
 #csNav #csSession {
     border: medium none;
     float: right;
-}
-#csNav li a, #csNav #csUser, #csNav #csSession {
-    border-right: 1px solid #3C3437;
-    color: #888888;
-    display: block;
-    line-height: 40px;
-    padding: 0 10px;
-    text-decoration: none;
-    text-transform: lowercase;
 }
 #csNav #csUser {
     float: right;
@@ -218,7 +204,6 @@ div {
 
 .xjr li a{
 	    color: #888888;
-	    display: block;
 	    line-height: 40px;
 	    padding: 0 10px;
 	    text-decoration: none;
@@ -226,7 +211,7 @@ div {
 
 }
 
-li{
+.xjr li{
 	list-style-type:none;
 	border-left: 1px solid #3C3437;
 	}
@@ -327,4 +312,8 @@ ul a h1{
 	     	background-color: #EEEEEE;
 		    margin: 0 2px 0 2px;
 		    padding: 10px;
+}
+
+.xiq {
+    margin: 0 0 0 40px;
 }
