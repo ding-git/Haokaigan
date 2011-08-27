@@ -8,6 +8,7 @@ Haokaigan::Application.routes.draw do
   match '/admin/index' => 'admin#index'
   match '/admin/chapter' => 'admin#chapter'
   match '/admin/note' => 'admin#note'
+  match '/admin/index/new' => 'establishes#new'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

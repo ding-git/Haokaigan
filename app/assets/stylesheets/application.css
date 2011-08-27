@@ -311,3 +311,20 @@ ul a h1{
 #admin_tool span li{
 	    padding: 0 0 0 800px;
 }
+
+#admin_form{
+		     	background-color: #333333;
+
+}
+
+#admin_form span,#admin_form span a{
+	font-size: 14px;
+	padding: 0 0 0 5px;
+	color: #FFFFFF;
+}
+
+#admin_form form{
+	     	background-color: #EEEEEE;
+		    margin: 0 2px 0 2px;
+		    padding: 10px;
+}

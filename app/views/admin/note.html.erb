@@ -1,7 +1,17 @@
 <%= render 'tool' %>
 
 <p id="notice"><%= notice %></p>
+
+<div id="admin_form">
+
 <% @establish.each do |establish| %>
+
+<span>	
+	ID：<%= params[:id] %> - <%= params[:chapter] %> - <%= establish.id %> // Create：
+	<%= link_to '单元', admin_index_new_path %> |
+	<%= link_to '节', new_chapter_path(:id => params[:id]) %>	|
+	<%= link_to '文章', new_note_path(:id => params[:chapter]) %>	
+</span>
 
 <% if @chapter_s == true %>
 <h1>编辑:  <%= link_to establish.name, admin_chapter_path(:id => establish.id) %></h1>
@@ -46,6 +56,6 @@
 
 <% end %>
 
-------------------
-
 <% end %>
+
+</div>

@@ -1,16 +1,27 @@
 <p id="notice"><%= notice %></p>
 
+<div id="admin_form">
+
 <% @establish.each do |establish| %>
 
+<span>	
+	ID：<%= params[:id]+'- ' if !params[:id].nil?  %><%= establish.id %>  // Create：
+	<%= link_to '单元', admin_index_new_path %> |
+	<%= link_to '节', new_chapter_path(:id => params[:id]) %>	|
+	<%= link_to '文章', new_note_path(:id => establish.id) %>	
+</span> 
+
+<%= form_for(establish) do |f| %>
+
+
 <% if @chapter_s == true %>
-<h1>编辑:  <%= link_to establish.name, admin_chapter_path(:id => establish.id) %></h1>
+<h1>编辑详细内容:  <%= link_to establish.name, admin_chapter_path(:id => establish.id) %></h1>
 <% end %>
 
 <% if @note_s == true %>
-<h1>编辑:  <%= link_to establish.name, admin_note_path(:id => params[:id],:chapter => establish.id) %></h1>
+<h1>编辑详细内容:  <%= link_to establish.name, admin_note_path(:id => params[:id],:chapter => establish.id) %></h1>
 <% end %>
 
-<%= form_for(establish) do |f| %>
   <% if establish.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(establish.errors.count, "error") %> prohibited this establish from being saved:</h2>
@@ -36,6 +47,7 @@
   </div>
 <% end %>
 
-------------------
 
 <% end %>
+
+</div>
