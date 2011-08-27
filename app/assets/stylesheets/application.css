@@ -37,3 +37,165 @@ div {
 .edit {
 	width: 500px;
 }
+
+
+
+
+/*BODY*/
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, input, textarea, p, blockquote, th, td {
+    margin: 0;
+    padding: 0;
+}
+a {
+    color: #D09826;
+}
+a {
+    text-decoration: none;
+}
+
+a:hover{
+	color: #548B02;
+}
+
+/*HEADER*/
+#csNav ul {
+    list-style: none outside none;
+}
+#csNav #csLogo {
+    background: url("/images/logo.png") no-repeat scroll center center transparent;
+    border: medium none;
+    float: left;
+    height: 40px;
+    margin: 0 10px 0 0;
+    text-indent: -9999em;
+    text-transform: capitalize;
+    width: 90px;
+}
+#csNav {
+    background-color: #281F23;
+    background-image: -moz-linear-gradient(19% 75% 90deg, #251D21, #30292C);
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.3);
+    color: #888888;
+    font: 12px/14px Tahoma,Arial,sans-serif;
+    height: 40px;
+    min-width: 940px;
+    padding: 0 30px;
+}
+#csNav li {
+    float: left;
+}
+#csNav li a, #csNav #csUser, #csNav #csSession {
+    border-right: 1px solid #3C3437;
+    color: #888888;
+    display: block;
+    line-height: 40px;
+    padding: 0 10px;
+    text-decoration: none;
+    text-transform: lowercase;
+}
+#csNav #csSession {
+    border: medium none;
+    float: right;
+}
+#csNav li a, #csNav #csUser, #csNav #csSession {
+    border-right: 1px solid #3C3437;
+    color: #888888;
+    display: block;
+    line-height: 40px;
+    padding: 0 10px;
+    text-decoration: none;
+    text-transform: lowercase;
+}
+#csNav #csUser {
+    float: right;
+    padding-left: 40px;
+    position: relative;
+}
+#csNav li a, #csNav #csUser, #csNav #csSession {
+    border-right: 1px solid #3C3437;
+    color: #888888;
+    display: block;
+    line-height: 40px;
+    padding: 0 10px;
+    text-decoration: none;
+    text-transform: lowercase;
+}
+
+/*FOOTER*/
+
+#footer-wrap {
+    background: none repeat scroll 0 0 rgba(21, 21, 21, 0.7);
+    border-top: 1px solid rgba(0, 0, 0, 0.7);
+    bottom: 0;
+    height: 50px;
+    min-width: 960px;
+    width: 100%;
+    position: absolute;
+}
+
+#footer-font {
+	text-align:center;
+	color:#FFF;
+	padding-top: 10px;
+	text-shadow: 1px 2px 1px #222222;
+}
+
+
+
+/*CONTENT*/
+#content-wrap {
+	padding-top: 10px;
+    padding-bottom: 75px;
+
+}
+
+#content {
+    margin: 0 auto 40px;
+    position: relative;
+    width: 948px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+#back-to-top{
+	position:fixed;
+	bottom:100px;
+	left:60px;
+}
+#back-to-top a{
+	text-align:center;
+	text-decoration:none;
+	color:#d1d1d1;
+	display:block;
+	width:80px;
+	/*使用CSS3中的transition属性给跳转链接中的文字添加渐变效果*/
+	-moz-transition:color 1s; 
+	-webkit-transition:color 1s;
+	-o-transition:color 1s;
+}
+#back-to-top a:hover{
+	color:#979797;
+}
+#back-to-top a span{
+	background:#d1d1d1;
+	border-radius:6px;
+	display:block;
+	height:80px;
+	width:80px;
+	margin-bottom:5px;
+	-moz-transition:background 1s;
+	-webkit-transition:background 1s;
+	-o-transition:background 1s;
+}
+#back-to-top a:hover span{
+	background:#979797 url(images/arrow-up.png) no-repeat center center;
+}
