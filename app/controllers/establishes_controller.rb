@@ -1,4 +1,8 @@
+# coding: utf-8
 class EstablishesController < ApplicationController
+  
+  before_filter :title
+  
   # GET /establishes
   # GET /establishes.json
   def index
@@ -96,4 +100,11 @@ class EstablishesController < ApplicationController
       format.json { head :ok }
     end
   end
+  
+  private
+  
+  def title
+    @title = '公司注册 - '
+  end
+  
 end
