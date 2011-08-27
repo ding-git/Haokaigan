@@ -1,0 +1,11 @@
+<dl id="faq">
+	<% @note.each do |note| %>
+	<dt><h1><%= note.que %></h1></dt>
+	<dd>
+	<div class="xkq">
+	<%= link_to '解答','#',:class => 'xhq_ans' %>
+	</div>
+	&nbsp;&nbsp;<%= note.ans %>
+	</dd>
+	<% end %>
+</dl>

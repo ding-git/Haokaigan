@@ -7,11 +7,3 @@
 //= require jquery
 //= require jquery_ujs
 //= require_tree .
-$(document).ready(function() {
-//折叠问题效果
-   $('#faq').find('dt').click(function() {
-     $(this).next().slideToggle();
-   });
-
-
-});

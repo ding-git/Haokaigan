@@ -19,6 +19,7 @@ class EstablishesController < ApplicationController
   def show
     @establish      = Establish.find(params[:id])
     @chapter        = @establish.chapter
+    
     unless @establish.chapter.empty?
       @chapter_one    = @chapter.first
       @note           = @chapter_one.note
@@ -26,7 +27,10 @@ class EstablishesController < ApplicationController
       @chapter_one    = []
       @note           = []
     end
-
+    
+    if @establish.id != Establish.last.id
+      @button_path = (params[:id].to_i+1).to_s
+    end
 
     respond_to do |format|
       format.html # show.html.erb

@@ -74,6 +74,10 @@ div {
     width: 270px;
 }
 
+.xjr input{
+	width: 200px;
+}
+
 .xpt {
     min-height: 340px;
     padding: 25px 0 50px;
@@ -227,9 +231,9 @@ li{
 	border-left: 1px solid #3C3437;
 	}
 
-.xhq, .xgq, .xfq {
+.xhq_zhihu,.xhq_down,.xhq_ans {
 	    border-radius: 4px 4px 4px 4px;
-	    color: #578CCA;
+
 	    float: left;
 	    font-size: 12px;
 	    font-weight: bold;
@@ -238,13 +242,24 @@ li{
 	    overflow: hidden;
 	    text-align: center;
 	    text-decoration: none;
-	    width: 20px;
-	}
-	.xhq {
-	    background: none repeat scroll 0 0 #E1F0F7;
-	    font-size: 11px;
+	    width: 30px;
+
 	}
 
+.xhq_ans{
+		background: none repeat scroll 0 0 #EEEEEE;
+		color: green;
+}
+
+.xhq_down{
+		background: none repeat scroll 0 0 #EEEEEE;
+		color: #FF0000;
+}
+
+.xhq_zhihu{
+			background: none repeat scroll 0 0 #E1F0F7;
+		    color: #578CCA;
+}
 
 
 
@@ -253,11 +268,20 @@ li{
 
 
 
+.xnh {
+    background: none repeat scroll 0 0 #F4F4F4;
+    display: block;
+    height: 55px;
+    padding: 0 0 0 20px;
+    text-decoration: none;
+}
 
-
-
-
-
-
-
+ul a h1{
+	font-size: 20px;
+	    padding: 15px 0 20px 0;
+}
+.xo {
+	width: 200px;
+    border-radius: 5px 5px 5px 5px;
+}
 

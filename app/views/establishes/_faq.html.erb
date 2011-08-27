@@ -1,12 +1,31 @@
-
+<script>
+	$(document).ready(function() {
+	//折叠问题效果
+	   $('#faq').find('dt').click(function() {
+	     $(this).next().slideToggle();
+	   });
+	});
+</script>
 <dl id="faq">
 	<% @note.each do |note| %>
 	<dt><h1><%= note.que %></h1></dt>
 	<dd>
 	<div class="xkq">
-	<%= link_to '答','#',:class => 'xhq' %>
+	<%= link_to '解答','#',:class => 'xhq_ans' %>
 	</div>
 	&nbsp;&nbsp;<%= note.ans %>
 	</dd>
 	<% end %>
+	<dd>
+	<div class="xkq">
+	<%= link_to '下载','#',:class => 'xhq_down' %>
+	</div>
+	&nbsp;&nbsp;<span id="leyouyou">lala</span>
+	</dd>
+	<dd>
+		<div class="xkq">
+		<%= link_to  '知乎', '#',:class => 'xhq_zhihu' %>
+		</div>
+		&nbsp;&nbsp;
+	</dd>
 </dl>
