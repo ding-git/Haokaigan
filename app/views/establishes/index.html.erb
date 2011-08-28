@@ -1,3 +1,9 @@
+浏览器判断：<%= '这是Firefox' if request.env['HTTP_USER_AGENT'].downcase.include?('firefox') %></br>
+浏览器判断：<%= '这是safari' if request.env['HTTP_USER_AGENT'].downcase.include?('safari') %></br>
+
+<%= request.env['HTTP_USER_AGENT'] %></br>
+<%= request.env["REQUEST_URI"] %>
+
 <h1>Listing establishes</h1>
 
 <table>
