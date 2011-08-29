@@ -16,6 +16,10 @@ gem "ckeditor", :git => "git://github.com/galetahub/ckeditor.git"
 gem "carrierwave"
 gem "mini_magick"
 
+#分页
+
+gem 'will_paginate', '~> 3.0'
+
 group :assets do
   gem 'sass-rails', "  ~> 3.1.0.rc"
   gem 'coffee-rails', "~> 3.1.0.rc"

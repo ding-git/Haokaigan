@@ -1,5 +1,7 @@
 <h1>SHOW BLOGS</h1>
 
+<%= will_paginate @pages %>
+
 <% @pages.each do |page| %>
 
 	<div id="h1_red">
@@ -12,5 +14,7 @@
 <% end %>
 
 <br />
+
+<%= will_paginate @pages %>
 
 <%= link_to 'New Page', new_page_path %>

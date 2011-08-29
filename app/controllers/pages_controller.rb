@@ -2,7 +2,7 @@ class PagesController < ApplicationController
   # GET /pages
   # GET /pages.json
   def index
-    @pages = Page.all(:order=>"created_at DESC")
+    @pages = Page.paginate(:page => params[:page], :per_page => 2).order('created_at DESC')
 
     respond_to do |format|
       format.html # index.html.erb
