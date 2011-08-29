@@ -21,4 +21,8 @@ class AdminController < ApplicationController
     @title = '文章管理 - '
   end
   
+  def kuang
+    
+  end
+  
 end

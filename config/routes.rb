@@ -5,6 +5,7 @@ Haokaigan::Application.routes.draw do
 
   resources :establishes
   
+  match '/admin/kuang' => 'admin#kuang'
   match '/admin/index' => 'admin#index'
   match '/admin/chapter' => 'admin#chapter'
   match '/admin/note' => 'admin#note'

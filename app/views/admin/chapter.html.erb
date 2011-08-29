@@ -1,4 +1,17 @@
 <%= render 'tool' %>
 
+<% if @establish.count.to_i == 0 %>
+
+<div id='admin_form'>
+<span>	
+	Create：
+	<%= link_to '单元', admin_index_new_path %> |
+	<%= link_to '节', new_chapter_path(:id => params[:id]) %>	|
+	<%= link_to '文章', new_note_path(:id => params[:chapter])  %>	
+</span> 
+</div>
+
+<% end %>
 
 <%= render 'form' %>
+
