@@ -1,4 +1,6 @@
 Haokaigan::Application.routes.draw do
+  resources :pages
+
   resources :notes
 
   resources :chapters

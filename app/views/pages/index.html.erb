@@ -1,0 +1,16 @@
+<h1>SHOW BLOGS</h1>
+
+<% @pages.each do |page| %>
+
+	<div id="h1_red">
+		<h1><%= page.name %></h1>
+		<%= page.created_at %> | <%= link_to 'Edit', edit_page_path(page) %>
+	</div>
+
+	<span><%=raw page.content %></span>
+
+<% end %>
+
+<br />
+
+<%= link_to 'New Page', new_page_path %>

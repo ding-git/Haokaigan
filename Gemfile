@@ -7,6 +7,15 @@ gem 'mysql2'
 gem 'execjs'  
 gem 'therubyracer'
 
+#编辑框
+
+gem "ckeditor", :git => "git://github.com/galetahub/ckeditor.git"
+
+#图片上传
+
+gem "carrierwave"
+gem "mini_magick"
+
 group :assets do
   gem 'sass-rails', "  ~> 3.1.0.rc"
   gem 'coffee-rails', "~> 3.1.0.rc"

@@ -325,3 +325,14 @@ ul a h1{
     padding: 10px;
     position: relative;
 }
+
+#h1_red{
+	border: 5px solid #F4F4F4;
+    margin: 20px 0 0 0;
+    padding: 10px;
+}
+
+#h1_red h1{
+	font-size: 16px;
+	color: red;
+}
