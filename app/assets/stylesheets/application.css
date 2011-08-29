@@ -317,3 +317,11 @@ ul a h1{
 .xiq {
     margin: 0 0 0 40px;
 }
+
+.ak {
+    mbackground: none repeat scroll 0 0 #FFFFFF;
+    border: 5px solid #F4F4F4;
+    margin: 0 0 20px;
+    padding: 10px;
+    position: relative;
+}
