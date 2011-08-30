@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/Fixtures.html
+
+one:
+  name: MyString
+  partner_link: MyString
+  content: MyText
+  chapter_id: 1
+
+two:
+  name: MyString
+  partner_link: MyString
+  content: MyText
+  chapter_id: 1

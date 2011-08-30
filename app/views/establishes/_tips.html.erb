@@ -3,8 +3,18 @@
 	<%= link_to 'Tips','#',:class => 'xhq_down' %>
 </div>
 <div class="xiq">
-	<% 3.times do |xx| %>
-	<li><%= link_to 'ss'+xx.to_s,'xx' %></li>
+	
+	<% if @tips.count == 0 %>
+	
+		<%=raw '&nbsp' %>
+	
+	<% else %>
+	
+		<% @tips.each do |tips| %>
+		<li><%= link_to tips.name,tips.tips_link %></li>
+		<% end %>
+
 	<% end %>
+
 </div>
 </dd>

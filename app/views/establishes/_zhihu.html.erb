@@ -5,9 +5,9 @@
 		</div>
 	
 		<div class="xiq">
-		<% 3.times do |xx| %>
-		<li><%= link_to '知乎'+xx.to_s,'xx' %></li>
-		<% end %>
+			<% @partners.each do |partners| %>
+			<li><%= link_to partners.name,partners.partner_link %></li>
+			<% end %>
 		</div>
 	</dd>
 <% end %>

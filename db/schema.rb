@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110829221947) do
+ActiveRecord::Schema.define(:version => 20110830012325) do
 
   create_table "chapters", :force => true do |t|
     t.integer  "establish_id"
@@ -56,6 +56,24 @@ ActiveRecord::Schema.define(:version => 20110829221947) do
     t.text     "content"
     t.datetime "created_at"
     t.datetime "updated_at"
+  end
+
+  create_table "partners", :force => true do |t|
+    t.string   "name"
+    t.string   "partner_link"
+    t.text     "content"
+    t.integer  "chapter_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "tips", :force => true do |t|
+    t.string   "name"
+    t.string   "tips_link"
+    t.text     "content"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "chapter_id"
   end
 
 end

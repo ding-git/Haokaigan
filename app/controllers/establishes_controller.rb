@@ -23,9 +23,13 @@ class EstablishesController < ApplicationController
     unless @establish.chapter.empty?
       @chapter_one    = @chapter.first
       @note           = @chapter_one.note
+      @tips           = @chapter_one.tip
+      @partners       = @chapter_one.partner
     else
       @chapter_one    = []
       @note           = []
+      @tips           = []
+      @partners       = []
     end
     
     if @establish.id != Establish.last.id
@@ -47,6 +51,8 @@ class EstablishesController < ApplicationController
       @chapter        = @unit.chapter
       @chapter_one    = @chapter.find(params[:more])
       @note           = @chapter_one.note
+      @tips           = @chapter_one.tip
+      @partners       = @chapter_one.partner
     end
     
     respond_to do |format|
