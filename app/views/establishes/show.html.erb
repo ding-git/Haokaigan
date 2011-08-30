@@ -1,35 +1,47 @@
 <%= render 'shared/message' %>
 
-<div id="xue" class="xkr">
-<ul class="xph xq">
-<a class="xo xmh xnh" href="/log/questions">
-<h1><%= @establish.name %></h1>
-</a>
-</ul>
-</div>
+
+
 
 <div class="xr xpt">
+	
+	<ul class="xph xq">
+		<div class="xoh">
+		<a class="xo xmh xnh" href="/log/questions">
+		<h1>关键词</h1>
+		</a>
+		</div>
+		<div class="xoh">
+		<a class="xo xmh xnh" href="/log/questions">
+		<h1>实战经验</h1>
+		</a>
+		</div>
+	</ul>
+	
 	<div class="xlr" id="nobody">
 		<%= render 'faq' %>
 	</div>
 
 
+
 	<div class="xjr">
-		<h2><%= @establish.description %></h2>
-		<% @chapter.each do |chapter| %>
-		<li>
-			<%= link_to chapter.name, new_establish_path(:id => params[:id],:more => chapter.id), :remote => true, :id => "new_user_link" %>
-		</li>
-		<% end %>
+			<h2><%= @establish.description %></h2>
+			
+		<%= render 'sidebar' %>
 		
 		<% if @establish.id != Establish.last.id %>
-		<%= button_to "下一单元", @button_path, :method => :get %>
+		<%= link_to '下一单元',@button_path,:id => 'xtg',:class => 'xb xp xfs' %>
 		<% end %>
+		
 	</div>
 	<div>
 
 	</div>
 </div>
+
+
+
+
 <div class="edit">
 	<%= link_to 'Edit', edit_establish_path(@establish) %> |
 	<%= link_to 'Back', establishes_path %>

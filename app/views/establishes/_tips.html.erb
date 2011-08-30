@@ -1,8 +1,10 @@
 	<dd>
+
 <div class="xkq">
-	<%= link_to 'Tips','#',:class => 'xhq_down' %>
+	<%= image_tag '/images/info.png' %>
 </div>
-<div class="xiq">
+
+<div>
 	
 	<% if @tips.count == 0 %>
 	
@@ -11,7 +13,9 @@
 	<% else %>
 	
 		<% @tips.each do |tips| %>
-		<li><%= link_to tips.name,tips.tips_link %></li>
+		<div class="xiq">
+					<li><%= link_to tips.name,tips.tips_link %></li>
+		</div>
 		<% end %>
 
 	<% end %>

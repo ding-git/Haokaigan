@@ -9,10 +9,16 @@
 
 <dl id="faq">
 	<% @note.each do |note| %>
-	<dt><h1><%= note.que %></h1></dt>
+	<dt>
+		<h1>
+			<%= image_tag '/images/page.png' %>
+			<%= link_to note.que,'javascript:void(0);' %>		
+		</h1>
+	</dt>
+	
 	<dd>
 	<div class="xkq">
-		<%= link_to '解答','#',:class => 'xhq_ans' %>
+		<%= image_tag '/images/cloud_comment.png' %>
 	</div>
 	<div class="xiq">
 		<%= note.ans %>		

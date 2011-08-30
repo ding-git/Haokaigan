@@ -1,10 +1,10 @@
 <% if @zhihu == true %>
 	<dd>
-		<div class="xkq">
+		<div>
 		<%= link_to  '知乎', '#',:class => 'xhq_zhihu' %>
 		</div>
 	
-		<div class="xiq">
+		<div class="xsq">
 			<% @partners.each do |partners| %>
 			<li><%= link_to partners.name,partners.partner_link %></li>
 			<% end %>

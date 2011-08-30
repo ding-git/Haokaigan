@@ -25,6 +25,7 @@ class EstablishesController < ApplicationController
       @note           = @chapter_one.note
       @tips           = @chapter_one.tip
       @partners       = @chapter_one.partner
+      params[:more]   ||= @chapter.first.id
     else
       @chapter_one    = []
       @note           = []

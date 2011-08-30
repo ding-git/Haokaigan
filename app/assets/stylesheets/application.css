@@ -31,6 +31,16 @@ body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, 
 }
 
 
+.xoh {
+    float: left;
+    height: 55px;
+    margin: 0px 90px 0 0;
+    max-width: 145px;
+    padding: 0 0 20px 0;
+    width: 30%;
+}
+
+
 li {
     display: block;
 }
@@ -76,8 +86,7 @@ div {
 
 .xjr {
     float: left;
-    margin: 0 0 0 0px;
-    width: 270px;
+    margin: -70px 0 0 10px;
 }
 
 .xjr input{
@@ -213,7 +222,6 @@ div {
 
 .xjr li{
 	list-style-type:none;
-	border-left: 1px solid #3C3437;
 	}
 
 .xhq_zhihu,.xhq_down,.xhq_ans {
@@ -315,13 +323,17 @@ ul a h1{
 }
 
 .xiq {
-    margin: 0 0 0 40px;
+    margin: -26px 0 0 20px;
+}
+
+.xsq {
+    margin: 0 0 0 35px;
 }
 
 .ak {
+	border-radius: 5px 5px 5px 5px;
     mbackground: none repeat scroll 0 0 #FFFFFF;
     border: 5px solid #F4F4F4;
-    margin: 0 0 20px;
     padding: 10px;
     position: relative;
 }
@@ -403,3 +415,80 @@ ul a h1{
     color: black; }
     .apple_pagination a:hover, .apple_pagination a:focus {
       text-decoration: underline; }
+
+
+
+
+
+
+	.linked_list_item {
+	    border: 0 none;
+	    padding: 0 0 1px;
+	}
+	.list_item, .linked_list_item {
+	    background: none repeat scroll 0 0 #FFFFFF;
+	    overflow: hidden;
+	    padding: 5px 0;
+
+	}
+
+
+	.linked_list_item .selected:hover, .linked_list_item .selected {
+	    background-color: #E0E0E0;
+	    color: #444444;
+	    cursor: default;
+	}
+	.linked_list_item .selected, .linked_list_item .link:hover {
+	    background-color: #DFEAF4;
+	    text-decoration: none;
+	}
+	.linked_list_item .link {
+	    background-image: url("/images/triangle.gif");
+	    background-position: left center;
+	    background-repeat: no-repeat;
+	    border-radius: 5px 5px 5px 5px;
+	    clear: both;
+	    display: block;
+	    font-weight: bold;
+	}
+	
+	
+	
+	
+	.xd, .xc, .xb {
+		background: -moz-linear-gradient(center top , #F8F8F9, #E6E6E8) repeat scroll 0 0 transparent;
+	    background: #F8F8F9;
+		background: -webkit-gradient(linear,0 0,0 100%,from(#F8F8F9),to(#E6E6E8));
+		background: -moz-linear-gradient(top,#F8F8F9,#E6E6E8);
+		width: 230px;
+	    border-radius: 3px 3px 3px 3px;
+	    cursor: pointer;
+	    display: inline-block;
+	    font: 14px/22px "Helvetica Neue",Arial,sans-serif;
+	    padding: 4px 10px;
+	    text-align: center;
+	    text-decoration: none !important;
+	    vertical-align: middle;
+	    display: block;
+	    height: 22px;
+	    margin: 20px 0 0;
+	    border: 1px solid #BBBBBB;
+		filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f8f8f9',endColorstr='#e6e6e8');
+		-webkit-box-shadow: 0 1px 0 #fff inset,0 1px 0 rgba(0,0,0,.1);
+		-moz-box-shadow: 0 1px 0 #fff inset,0 1px 0 rgba(0,0,0,.1);
+		-o-box-shadow: 0 1px 0 #fff inset,0 1px 0 rgba(0,0,0,.1);
+		box-shadow: 0 1px 0 #fff inset,0 1px 0 rgba(0,0,0,.1);
+	    color: #666666 !important;
+	    text-shadow: 0 1px 0 #FFFFFF;
+	}
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
