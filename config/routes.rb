@@ -1,4 +1,8 @@
 Haokaigan::Application.routes.draw do
+  
+  
+  get 'establishes/add'
+  
   resources :experiences
 
   resources :partners
@@ -13,11 +17,16 @@ Haokaigan::Application.routes.draw do
 
   resources :establishes
   
+  
+  
   match '/admin/kuang' => 'admin#kuang'
   match '/admin/index' => 'admin#index'
   match '/admin/chapter' => 'admin#chapter'
   match '/admin/note' => 'admin#note'
   match '/admin/index/new' => 'establishes#new'
+
+
+  
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

@@ -1,8 +1,5 @@
 <%= render 'shared/message' %>
 
-
-
-
 <div class="xr xpt">
 	
 	<ul class="xph xq">
@@ -28,10 +25,11 @@
 
 
 
+
 	<div class="xjr">
 		
 		<div class="xsw">
-		最近编辑： <%= @note.last.updated_at.to_s(:short) %>
+		最近编辑： <%= @note.last.updated_at %>
 		</div>
 		<div class="xsw section_border">
 		被浏览
@@ -48,3 +46,10 @@
 	</div>
 </div>
 
+
+
+<%= javascript_include_tag "/javascripts/ckeditor/ckeditor.js" %>
+
+<div class="xr xpt" id='jsform'>
+
+</div>

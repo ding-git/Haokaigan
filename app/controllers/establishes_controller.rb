@@ -112,6 +112,17 @@ class EstablishesController < ApplicationController
     end
   end
   
+  
+  def add
+    
+        @note = Note.new()
+    
+    respond_to do |format|
+      format.js
+    end  
+    
+  end
+  
   private
   
   def title
