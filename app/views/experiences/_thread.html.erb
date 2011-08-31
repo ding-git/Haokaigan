@@ -1,0 +1,35 @@
+<script>
+	$(document).ready(function() {
+	//折叠问题效果
+	   $('#faq').find('dt').click(function() {
+	     $(this).next().slideToggle();
+	   });
+	});
+</script>
+
+<dl id="faq">
+	<% @experiences.each do |experience| %>
+	<dt>
+		<h1>
+			<%= link_to experience.title,'javascript:void(0);' %>	<img class="xoq" title="李冰" src="/images/none_user_image.jpg">	
+		</h1>
+	</dt>
+	
+	<dd>
+	<div class="xkq">
+		<%= image_tag '/images/coffee.png' %>
+	</div>
+	<div class="xiq">
+		<li><%= experience.content %></li>
+		<li>
+		2011-09-09 ding发表 		
+		<%= image_tag '/images/comments.png' %><%= link_to '讨论',edit_experience_path(experience) %> 
+		<%= image_tag '/images/edit.png' %><%= link_to '删除',edit_experience_path(experience) %> 
+		<%= image_tag '/images/trash.png' %><%= link_to '编辑',edit_experience_path(experience) %>
+		</li>		
+	</div>
+
+	</dd>
+	<% end %>
+
+</dl>

@@ -7,13 +7,17 @@
 	
 	<ul class="xph xq">
 		<div class="xoh">
-		<a class="xo xmh xnh" href="/log/questions">
-		<h1>关键词</h1>
+		<a class="xo xmh xnh_select" href="/log/questions">
+		<h1><%= @establish.description %></h1>
+		<h2>关键词</h2>
 		</a>
 		</div>
+	</ul>
+	<ul class="xph xq">
 		<div class="xoh">
 		<a class="xo xmh xnh" href="/log/questions">
-		<h1>实战经验</h1>
+			<h1><%= @establish.description %></h1>
+			<h2>实战经验</h2>
 		</a>
 		</div>
 	</ul>
@@ -25,9 +29,17 @@
 
 
 	<div class="xjr">
-			<h2><%= @establish.description %></h2>
+		
+		<div class="xsw">
+		最近编辑： <%= @note.last.updated_at.to_s(:short) %>
+		</div>
+		<div class="xsw section_border">
+		被浏览
+		<strong>24</strong>
+		次
+		</div>
 			
-		<%= render 'sidebar' %>
+		<%= render 'shared/sidebar' %>
 		
 		<% if @establish.id != Establish.last.id %>
 		<%= link_to '下一单元',@button_path,:id => 'xtg',:class => 'xb xp xfs' %>

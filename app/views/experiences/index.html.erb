@@ -1,0 +1,27 @@
+<%= render 'shared/message' %>
+
+<div class="xr xpt">
+	
+	<ul class="xph xq">
+		<div class="xoh">
+		<a class="xo xmh xnh" href="/log/questions">
+		<h1>关键词</h1>
+		</a>
+		</div>
+		<div class="xoh">
+		<a class="xo xmh xnh_select" href="/log/questions">
+		<h1>实战经验</h1>
+		</a>
+		</div>
+	</ul>
+	
+	<div class="xlr" id="nobody">
+		<h1>分享你的创业实战经验</h1>
+		<%= render 'thread' %>
+	</div>
+
+
+
+</div>
+
+	<%= will_paginate @pages %>

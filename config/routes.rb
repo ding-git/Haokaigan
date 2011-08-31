@@ -1,4 +1,6 @@
 Haokaigan::Application.routes.draw do
+  resources :experiences
+
   resources :partners
 
   resources :tips
