@@ -21,7 +21,10 @@
 		<%= image_tag '/images/comment.png' %>
 	</div>
 	<div class="xiq">
-		<%= note.ans %>		
+		<%=raw note.ans %>
+		<%= image_tag '/images/edit.png' %><%= link_to '编辑',edit_note_path(note,:more => params[:more]),:remote => true %>
+		<span class="edit_remote" id="xiq_<%= note.id %>">
+		</span>
 	</div>
 
 	</dd>

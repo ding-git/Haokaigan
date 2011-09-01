@@ -29,12 +29,19 @@ class NotesController < ApplicationController
     respond_to do |format|
       format.html # new.html.erb
       format.json { render json: @note }
+
     end
   end
 
   # GET /notes/1/edit
   def edit
     @note = Note.find(params[:id])
+    
+    respond_to do |format|
+      format.html
+      format.js
+    end
+    
   end
 
   # POST /notes

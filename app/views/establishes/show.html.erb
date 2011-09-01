@@ -29,7 +29,7 @@
 	<div class="xjr">
 		
 		<div class="xsw">
-		最近编辑： <%= @note.last.updated_at %>
+		最近编辑： <%= @note.last.updated_at if !@note.last.nil?%>
 		</div>
 		<div class="xsw section_border">
 		被浏览
