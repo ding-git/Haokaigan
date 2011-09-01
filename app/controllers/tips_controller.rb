@@ -1,4 +1,5 @@
 class TipsController < ApplicationController
+  before_filter :verification
   # GET /tips
   # GET /tips.json
   def index

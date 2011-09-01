@@ -1,4 +1,6 @@
 class PagesController < ApplicationController
+  before_filter :verification, :except => [:index]
+  
   # GET /pages
   # GET /pages.json
   def index
@@ -80,4 +82,7 @@ class PagesController < ApplicationController
       format.json { head :ok }
     end
   end
+  
+
+  
 end

@@ -1,5 +1,6 @@
 # coding: utf-8
 class AdminController < ApplicationController
+  before_filter :verification
   
   def index
     @establish = Establish.all

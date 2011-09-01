@@ -16,8 +16,16 @@
 </ul>
 
 
-	<%= link_to 'Sign out', '#', :id => 'csUser' %>
-	<%= link_to 'Welcom back,', '#', :id => 'csSession' %>
+<% if signed_in? %>
+	<%= link_to '注销', signout_path, :id => 'csUser' %>
+<% else %>
+	<%= link_to '登陆', signin_path, :id => 'csUser' %>
+<% end %>
+	
+
+	<% if signed_in? %>
+	<%= link_to '欢迎回来，'+current_user.name, '#', :id => 'csSession' %>
+	<% end %>
 
 
 </div>

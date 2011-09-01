@@ -3,6 +3,8 @@ Haokaigan::Application.routes.draw do
   
   resources :users
 
+  resources :sessions,      :only => [:new, :create, :destroy]
+
   get 'establishes/add'
   
   resources :experiences
@@ -26,8 +28,8 @@ Haokaigan::Application.routes.draw do
   match '/admin/chapter' => 'admin#chapter'
   match '/admin/note' => 'admin#note'
   match '/admin/index/new' => 'establishes#new'
-
-
+  match '/signout' => 'sessions#destroy'
+  match '/signin' => 'sessions#new'
   
 
   # The priority is based upon order of creation:

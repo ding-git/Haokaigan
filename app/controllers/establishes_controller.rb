@@ -1,6 +1,7 @@
 # coding: utf-8
 class EstablishesController < ApplicationController
   
+  before_filter :verification
   before_filter :title
   
   # GET /establishes
