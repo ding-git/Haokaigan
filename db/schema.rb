@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110831013914) do
+ActiveRecord::Schema.define(:version => 20110901071118) do
 
   create_table "chapters", :force => true do |t|
     t.integer  "establish_id"
@@ -82,6 +82,21 @@ ActiveRecord::Schema.define(:version => 20110831013914) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "chapter_id"
+  end
+
+  create_table "users", :force => true do |t|
+    t.string   "name"
+    t.string   "bio"
+    t.boolean  "deleted",               :default => false
+    t.boolean  "credible",              :default => false
+    t.boolean  "admin",                 :default => false
+    t.string   "email"
+    t.string   "password"
+    t.string   "password_confirmation"
+    t.string   "encrypted_password"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "salt"
   end
 
 end

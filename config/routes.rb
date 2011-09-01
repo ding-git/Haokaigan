@@ -1,6 +1,8 @@
 Haokaigan::Application.routes.draw do
   
   
+  resources :users
+
   get 'establishes/add'
   
   resources :experiences

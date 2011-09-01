@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/Fixtures.html
+
+one:
+  name: MyString
+  bio: MyString
+  deleted: 
+  credible: 
+  admin: 
+  email: MyString
+  password: MyString
+  password_confirmation: MyString
+  encrypted_password: MyString
+
+two:
+  name: MyString
+  bio: MyString
+  deleted: 
+  credible: 
+  admin: 
+  email: MyString
+  password: MyString
+  password_confirmation: MyString
+  encrypted_password: MyString
