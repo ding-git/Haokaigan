@@ -25,6 +25,8 @@
 
 	<% if signed_in? %>
 	<%= link_to '欢迎回来，'+current_user.name, '#', :id => 'csSession' %>
+	<% else %>
+	<span id="csUser">&nbsp;</span>
 	<% end %>
 
 
