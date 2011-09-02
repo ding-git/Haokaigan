@@ -505,3 +505,50 @@ ul a h1{
 }
 
 
+
+
+
+
+div.field, div.actions {
+  margin-bottom: 10px;
+}
+
+.xdn {
+    margin: 5px 0 0;
+}
+
+.xbn {
+    margin: 0 0 0 53px;
+    padding: 0 0 10px;
+    vertical-align: top;
+}
+
+.xen {
+    float: left;
+    text-align: right;
+    width: 60px;
+margin: 5px;
+}
+
+div.field input{
+	background: none repeat scroll 0 0 #FFFFFF;
+    border: 1px solid #CCCCCC !important;
+    border-radius: 3px 3px 3px 3px;
+    box-shadow: 0 2px 2px #DEDEDE inset;
+    color: #777777;
+    font: 14px/14px 'Helvetica Neue',Helvetica,Arial,Sans-serif;
+    padding: 7px 5px !important
+}
+
+
+.xhl {
+    border-bottom: 1px solid #AAAAAA;
+    font-size: 14px;
+    margin: 0 0 10px;
+    padding: 0 0 10px;
+}
+
+#edit_submit{
+	width: 150px;
+	height: 30px;
+}

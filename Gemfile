@@ -9,7 +9,7 @@ gem 'therubyracer'
 
 #编辑框
 
-gem "ckeditor", :git => "git://github.com/galetahub/ckeditor.git"
+gem "ckeditor"
 
 #图片上传
 

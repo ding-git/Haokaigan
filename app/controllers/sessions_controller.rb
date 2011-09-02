@@ -5,7 +5,8 @@ class SessionsController < ApplicationController
   end
 
   def new
-    @title = "Sign in"
+    redirect_to current_user if signed_in?    
+    @title = "Sign in"    
   end
   
   def create

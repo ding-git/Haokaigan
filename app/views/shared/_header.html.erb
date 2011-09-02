@@ -1,14 +1,14 @@
 <div id="csNav">
-	<%= link_to 'title', '#', :id => 'csLogo' %>
+	<%= link_to 'title', '/', :id => 'csLogo' %>
 <ul>
 	<li>
-		<%= link_to '首页', '#' %>
+		<%= link_to '首页', '/' %>
 	</li>
 	<li>
-		<%= link_to '创业关键词', '#' %>
+		<%= link_to '创业关键词', establishes_path %>
 	</li>
 	<li>
-		<%= link_to '实战经验', '#' %>
+		<%= link_to '实战经验', experiences_path %>
 	</li>
 		<li>
 			<%= link_to '财务工具箱', '#' %>
@@ -24,7 +24,7 @@
 	
 
 	<% if signed_in? %>
-	<%= link_to '欢迎回来，'+current_user.name, '#', :id => 'csSession' %>
+	<%= link_to '欢迎回来，'+current_user.name, current_user, :id => 'csSession' %>
 	<% else %>
 	<span id="csUser">&nbsp;</span>
 	<% end %>
