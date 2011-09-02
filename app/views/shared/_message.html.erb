@@ -1,13 +1,13 @@
-<script>
-	$(document).ready(function() {
-	//折叠问题效果
-	   $('#xkr').click(function() {
-	     $('.ak').hide();
-	   });
-	});
-</script>
+<% if !@noti.empty? %>
 
 	<div class="ak">
-	<div id="xbs" class="xv"> 最新动态 </div>
-	<a id="xkr" href="javascript:;">知道了</a>
+	<div id="xbs" class="xv"> 
+	
+		<% @noti.each do |message| %> 
+			<li><%= message.message %></li>
+		<% end %>
 	</div>
+		
+	<%= link_to '知道了', notification_path, :remote => true, :method => :delete, :id =>'xkr' %>
+	</div>
+<% end %>

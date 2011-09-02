@@ -7,6 +7,7 @@ class ApplicationController < ActionController::Base
 
   before_filter :switch
   
+  
   private
   
   def verification

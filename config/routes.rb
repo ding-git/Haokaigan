@@ -1,6 +1,8 @@
 Haokaigan::Application.routes.draw do
   
   
+  resources :notifications
+
   resources :users
 
   resources :sessions,      :only => [:index, :new, :create, :destroy]

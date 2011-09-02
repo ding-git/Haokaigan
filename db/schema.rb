@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110901071118) do
+ActiveRecord::Schema.define(:version => 20110902055503) do
 
   create_table "chapters", :force => true do |t|
     t.integer  "establish_id"
@@ -55,6 +55,14 @@ ActiveRecord::Schema.define(:version => 20110901071118) do
     t.string   "que"
     t.text     "ans"
     t.string   "img_url"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "notifications", :force => true do |t|
+    t.integer  "user_id"
+    t.text     "message"
+    t.string   "unread"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

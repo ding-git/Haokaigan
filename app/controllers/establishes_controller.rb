@@ -19,13 +19,13 @@ class EstablishesController < ApplicationController
   # GET /establishes/1.json
   def show
     @establish      = Establish.find(params[:id])
-    @chapter        = @establish.chapter
+    @chapter        = @establish.chapter.includes(['note'],['tip'],['partner'])
+    @noti           = User.find(current_user.id).notification
     
     unless @establish.chapter.empty?
-      @chapter_one    = @chapter.first
-      @note           = @chapter_one.note
-      @tips           = @chapter_one.tip
-      @partners       = @chapter_one.partner
+      @note           = @chapter.first.note
+      @tips           = @chapter.first.tip
+      @partners       = @chapter.first.partner
       params[:more]   ||= @chapter.first.id
     else
       @chapter_one    = []
@@ -49,12 +49,10 @@ class EstablishesController < ApplicationController
   def new
     @establish = Establish.new
     unless params[:id].nil?
-      @unit       = Establish.find(params[:id])
-      @chapter        = @unit.chapter
-      @chapter_one    = @chapter.find(params[:more])
-      @note           = @chapter_one.note
-      @tips           = @chapter_one.tip
-      @partners       = @chapter_one.partner
+      @chapter        = Establish.find(params[:id]).chapter
+      @note           = @chapter.find(params[:more]).note
+      @tips           = @chapter.find(params[:more]).tip
+      @partners       = @chapter.find(params[:more]).partner
     end
     
     respond_to do |format|
