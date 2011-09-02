@@ -6,7 +6,7 @@
 	
 		<div class="xsq">
 			<% @partners.each do |partners| %>
-			<li><%= link_to partners.name,partners.partner_link %></li>
+			<li><%= link_to partners.name,zhihu_url(partners.partner_link) %></li>
 			<% end %>
 			<li><%= image_tag '/images/microphone.png' %> <%= link_to  '提一个问题', '#',:id => 'xsqt' %></li>
 		</div>

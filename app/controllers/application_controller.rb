@@ -15,7 +15,6 @@ class ApplicationController < ActionController::Base
     end      
   end
   
-  
   def switch
     @zhihu = true
   end

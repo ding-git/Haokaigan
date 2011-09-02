@@ -20,6 +20,9 @@ gem "mini_magick"
 
 gem 'will_paginate', '~> 3.0'
 
+# 设置
+gem 'settingslogic'
+
 group :assets do
   gem 'sass-rails', "  ~> 3.1.0.rc"
   gem 'coffee-rails', "~> 3.1.0.rc"

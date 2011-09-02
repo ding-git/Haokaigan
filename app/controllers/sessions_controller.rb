@@ -1,12 +1,22 @@
 class SessionsController < ApplicationController
 
+  def index
+    redirect_to '/'
+  end
+
   def new
     @title = "Sign in"
   end
   
   def create
-    user = User.authenticate(params[:session][:email],
+    if params[:session][:email] =~ /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
+    user = User.authenticate_email(params[:session][:email],
                              params[:session][:password])
+    else                         
+    user = User.authenticate_name(params[:session][:email],
+                               params[:session][:password])
+    end
+    
     if user.nil?
       flash.now[:error] = "Invalid email/password combination."
       @title = "Sign in"

@@ -23,7 +23,12 @@ class User < ActiveRecord::Base
   end
 
   class << self
-    def authenticate(email, submitted_password)
+    def authenticate_name(name, submitted_password)
+      user = find_by_name(name)
+      (user && user.has_password?(submitted_password)) ? user : nil
+    end
+    
+    def authenticate_email(email, submitted_password)
       user = find_by_email(email)
       (user && user.has_password?(submitted_password)) ? user : nil
     end
