@@ -1,0 +1,16 @@
+<%= form_for(:session, :url => sessions_path) do |f| %>
+  <div class="field">
+    <%= f.label '用户名或邮箱' %>
+    <%= f.text_field :email %>
+  </div>
+  <div class="field">
+    <%= f.label '密码' %>
+    <%= f.password_field :password %>
+  </div>
+
+	<div class="field">
+	  <%= check_box_tag :remember_me, 1, params[:remember_me] %>
+	  <%= label_tag '记住我' %> <%= f.submit "登陆" %>
+	</div>
+
+<% end %>

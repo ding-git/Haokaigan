@@ -1,33 +1,37 @@
-<div id="csNav">
-	<%= link_to 'title', '/', :id => 'csLogo' %>
-<ul>
-	<li>
-		<%= link_to '首页', '/' %>
-	</li>
-	<li>
-		<%= link_to '创业关键词', establishes_path %>
-	</li>
-	<li>
-		<%= link_to '实战经验', experiences_path %>
-	</li>
-		<li>
-			<%= link_to '财务工具箱', '#' %>
-		</li>
-</ul>
+<div class="csNav">
 
 
-<% if signed_in? %>
-	<%= link_to '注销', signout_path, :id => 'csUser' %>
-<% else %>
-	<%= link_to '登陆', signin_path, :id => 'csUser' %>
-<% end %>
-	
-
-	<% if signed_in? %>
-	<%= link_to '欢迎回来，'+current_user.name, current_user, :id => 'csSession' %>
-	<% else %>
-	<span id="csUser">&nbsp;</span>
-	<% end %>
 
 
+</div>
+<div class="csGery">
+		<%= link_to 'title', '/', :id => 'csLogo' %>
+		<ul>
+			<li>
+				<%= link_to '首页', '/' %>
+			</li>
+			<li>
+				<%= link_to '关键词', establishes_path %>
+			</li>
+			<li>
+				<%= link_to '实战经验', experiences_path %>
+			</li>
+				<li>
+					<%= link_to '财务工具箱', '#' %>
+				</li>
+		</ul>
+
+
+		<% if signed_in? %>
+			<%= link_to '注销', signout_path, :id => 'csUser' %>
+		<% else %>
+			<%= link_to '登陆', signin_path, :id => 'csUser' %>
+		<% end %>
+
+
+			<% if signed_in? %>
+			<%= link_to '欢迎回来，'+current_user.name, current_user, :id => 'csSession' %>
+			<% else %>
+			<span id="csUser">&nbsp;</span>
+			<% end %>
 </div>

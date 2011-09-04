@@ -1,16 +1,4 @@
-
-
-
-<div class="side_tabs right_side_tabs">
-	<ul class="list_contents">
-		<% @chapter.each do |chapter| %>
-		<li class="tab linked_list_item first">
-			
-			<span <%=raw "class=\'link selected'" if chapter.id == params[:more].to_i %>>
-				<%= link_to chapter.name, new_establish_path(:id => params[:id],:more => chapter.id), :remote => true, :id => "new_user_link", :class => "link" %>
-			</span>
-		</li>
-		<% end %>
-	</ul>
-</div>
-
+	<div class="red"><span id="title_user_link"><%= @establish.name %></span></div>
+	<% @chapter.each do |chapter| %>
+	<div class="top"><%= link_to chapter.name,new_establish_path(:id => params[:id],:more => chapter.id), :remote => true, :id => "new_user_link", :class => "link" %></div>
+	<% end %>

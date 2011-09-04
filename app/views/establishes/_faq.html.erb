@@ -12,7 +12,7 @@
 	<dt>
 		<h1>
 			<%= image_tag '/images/flag.png' %>
-			<%= link_to note.que,'javascript:void(0);' %>		
+				
 		</h1>
 	</dt>
 	
@@ -21,8 +21,8 @@
 		<%= image_tag '/images/comment.png' %>
 	</div>
 	<div class="xiq">
-		<%=raw note.ans %>
-		<%= image_tag '/images/edit.png' %><%= link_to '编辑',edit_note_path(note,:more => params[:more]),:remote => true %>
+		
+		<%= image_tag '/images/edit.png' %>
 		<span class="edit_remote" id="xiq_<%= note.id %>">
 		</span>
 	</div>

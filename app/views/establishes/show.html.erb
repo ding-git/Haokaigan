@@ -1,50 +1,21 @@
 <%= render 'shared/message' %>
 
-<div class="xr xpt">
-	
-	<ul class="xph xq">
-		<div class="xoh">
-		<a class="xo xmh xnh_select" href="#">
-		<h1><%= @establish.description %></h1>
-		<h2>关键词</h2>
-		</a>
-		</div>
-	</ul>
-	<ul class="xph xq">
-		<div class="xoh">
-		<a class="xo xmh xnh" href="/experiences/">
-			<h1><%= @establish.description %></h1>
-			<h2>实战经验</h2>
-		</a>
-		</div>
-	</ul>
-	
-	<div class="xlr" id="nobody">
-		<%= render 'faq' %>
+<div class="content_main">
+	<div class="content_left">
+		<%= render 'newfaq' %>
+
 	</div>
-
-
-
-
-	<div class="xjr">
-		
-		<div class="xsw">
-		最近编辑： <%= @note.last.updated_at if !@note.last.nil?%>
-		</div>
-		<div class="xsw section_border">
-		被浏览
-		<strong>24</strong>
-		次
-		</div>
-			
+	<div class="content_right">
 		<%= render 'shared/sidebar' %>
-		
-		<% if @establish.id != Establish.last.id %>
-		<%= link_to '下一单元',@button_path,:id => 'xtg',:class => 'xb xp xfs' %>
-		<% end %>
-		
 	</div>
 </div>
+
+<div id="blank"></div>
+
+
+
+
+
 
 
 

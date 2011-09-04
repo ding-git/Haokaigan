@@ -1,0 +1,22 @@
+	<% @note.each do |note| %>
+
+<div class="content_warp">
+	<p><%= link_to note.que,'javascript:void(0);' %></p>
+
+	<%=raw note.ans %>
+	<div class='black_link'>
+		<li><%= link_to '编辑',edit_note_path(note,:more => params[:more]),:remote => true %> -</li>
+		<li><%= link_to '删除','/' %> -</li>
+		<li><%= link_to '知乎','/' %></li>
+		<li id='content_time'><%= note.updated_at %></li>
+	</div>
+	<div class="edit_windows" id="edit_window_<%= note.id %>"></div>
+</div>
+	<% end %>
+	
+	<div class="new_subject_link">
+		<div class="submit_red">
+			<%= link_to '新增内容',establishes_add_path(:id => params[:more]),:remote => true %>
+		</div>
+	</div>
+	<div id="jsform"></div>
