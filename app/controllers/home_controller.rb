@@ -8,7 +8,10 @@ class HomeController < ApplicationController
           @note = Note.last
       render 'index'
     end  
-
+  end
+  
+  def caiwu
+    @caiwu = []
   end
   
 end

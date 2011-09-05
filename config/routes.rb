@@ -9,6 +9,7 @@ Haokaigan::Application.routes.draw do
   resources :sessions,      :only => [:index, :new, :create, :destroy]
 
   get 'establishes/add'
+  get 'home/caiwu'
   
   resources :experiences
 

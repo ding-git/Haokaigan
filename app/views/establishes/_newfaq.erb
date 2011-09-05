@@ -1,6 +1,10 @@
 	<% @note.each do |note| %>
 
+
 <div class="content_warp">
+	
+			<div id="back-yellow"></div>			
+			<div id="back-right"><%= link_to '评论','/' %></div>
 	<p><%= link_to note.que,'javascript:void(0);' %></p>
 
 	<%=raw note.ans %>
@@ -8,7 +12,7 @@
 		<li><%= link_to '编辑',edit_note_path(note,:more => params[:more]),:remote => true %> -</li>
 		<li><%= link_to '删除','/' %> -</li>
 		<li><%= link_to '知乎','/' %></li>
-		<li id='content_time'><%= note.updated_at %></li>
+		<li id='content_time'><%= note.updated_at.to_formatted_s(:short)    %></li>
 	</div>
 	<div class="edit_windows" id="edit_window_<%= note.id %>"></div>
 </div>
