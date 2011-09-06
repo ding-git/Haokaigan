@@ -1,0 +1,22 @@
+
+
+<div class="content_main">
+	<h1>全局日志</h1>
+	<% @logs.each do |log| %>
+	<div class="content_left">
+		<div class="content_warp">
+				<span id='log_id'>ID:<%= log.id %></span>
+				<span id='log_id'>用户：<%= log.user.name %></span>
+			    <p>类型<%= log.type %></p>
+			    <p>主题：<%= log.title %></p>
+				<p>内容：<%= log.content %></p>
+		</div>
+	</div>
+	<% end %>
+	<div class="content_right">
+
+	</div>
+	
+		<%= will_paginate @pages %>
+</div>
+

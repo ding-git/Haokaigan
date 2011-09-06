@@ -1,5 +1,7 @@
 Haokaigan::Application.routes.draw do
   
+  resources :logs
+
   resources :tools
 
   root :to => 'home#index'

@@ -36,6 +36,7 @@ class NotesController < ApplicationController
   # GET /notes/1/edit
   def edit
     @note = Note.find(params[:id])
+
     
     respond_to do |format|
       format.html
@@ -65,8 +66,12 @@ class NotesController < ApplicationController
   def update
     @note = Note.find(params[:id])
 
+
     respond_to do |format|
       if @note.update_attributes(params[:note])
+        @log = Log.new(:title => @note.que, :content => @note.ans, :user_id => current_user.id , :note_id => params[:id])
+        @log.save
+    
         format.html { redirect_to :back, notice: 'Note was successfully updated.' }
         format.json { head :ok }
       else

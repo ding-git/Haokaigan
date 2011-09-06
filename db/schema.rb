@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110905023708) do
+ActiveRecord::Schema.define(:version => 20110906013850) do
 
   create_table "chapters", :force => true do |t|
     t.integer  "establish_id"
@@ -46,6 +46,16 @@ ActiveRecord::Schema.define(:version => 20110905023708) do
     t.integer  "chapter_id"
     t.string   "title"
     t.text     "content"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "logs", :force => true do |t|
+    t.string   "type"
+    t.string   "title"
+    t.text     "content"
+    t.integer  "user_id"
+    t.integer  "note_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

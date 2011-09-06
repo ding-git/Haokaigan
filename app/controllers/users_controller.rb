@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  before_filter :verification
+  before_filter :verification, :only => [:index,:edit,:destroy]
   # GET /users
   # GET /users.json
   def index

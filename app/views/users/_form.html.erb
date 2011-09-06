@@ -38,6 +38,24 @@
 	<dd>
   </div>
 
+  <div class="field">
+	<dt class="xen xdn">
+	    <%= f.label '密码' %><br />	
+	</dd>
+	<dd class="xbn">
+    <%= f.password_field :password %>
+	<dd>
+  </div>
+
+  <div class="field">
+	<dt class="xen xdn">
+	    <%= f.label '确认密码' %><br />	
+	</dd>
+	<dd class="xbn">
+    <%= f.password_field :password_confirmation %>
+	<dd>
+  </div>
+
   <div class="actions">
     <%= f.submit :value => '修改',:id => 'edit_submit' %>
   </div>

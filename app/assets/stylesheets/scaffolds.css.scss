@@ -82,9 +82,15 @@ div{
 	border-radius: 5px 5px 5px 5px;
 	margin: 5px;
 	padding: 5px;
+		#log_id{
+			margin: 0 10px;
+			color:#336699;
+			float:right;
+		}
 		p a{
 			font-size: 14px;
 			font-weight: 500;
+			
 		}
 		a{
 		color:$link-top-blue;
@@ -214,6 +220,7 @@ div{
 		}
 
 	}
+	
 }
 
 .csGery{
