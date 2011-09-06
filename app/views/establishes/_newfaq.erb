@@ -1,18 +1,35 @@
+<div class='content_topic'>
+	<div class='content_topic_main'>
+		<a id="xfg" class="xnl" href="/topic/创业">
+				<img class="xov" src="http://p2.zhimg.com/a1/8f/a18fa2cbe_l.jpg" alt="创业">
+	</div>
+	<div class="content_topic_desc">
+	<a name="edit" href="javascript:;"><h1><%= @current_chapter.name %></h1></a>
+	<a name="edit" href="javascript:;"><%= @current_chapter.description %></a>
+	</div>
+</div>
+
 	<% @note.each do |note| %>
 
 
 <div class="content_warp">
 	
 			<div id="back-yellow"></div>			
-			<div id="back-right"><%= link_to '评论','/' %></div>
+			<div class="back-right"><%= link_to '待完成','/' %> <%= image_tag 'triangle.png' %></div>
+								<div id="back-right-xmenu">
+								<%= link_to 'ding发表','/' %></br>
+								<%= link_to '待完成','/' %>
+									</div>
 	<p><%= link_to note.que,'javascript:void(0);' %></p>
-
+		
 	<%=raw note.ans %>
 	<div class='black_link'>
+		<li><%= link_to '讨论','/' %> -</li>
+		<li><%= link_to '纠错','/' %> -</li>
 		<li><%= link_to '编辑',edit_note_path(note,:more => params[:more]),:remote => true %> -</li>
 		<li><%= link_to '删除','/' %> -</li>
 		<li><%= link_to '知乎','/' %></li>
-		<li id='content_time'><%= note.updated_at.to_formatted_s(:short)    %></li>
+		<li id='content_time'><%= note.updated_at.to_formatted_s(:short) %></li>
 	</div>
 	<div class="edit_windows" id="edit_window_<%= note.id %>"></div>
 </div>

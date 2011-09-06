@@ -1,5 +1,7 @@
 Haokaigan::Application.routes.draw do
   
+  resources :tools
+
   root :to => 'home#index'
   
   resources :notifications

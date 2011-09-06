@@ -1,0 +1,44 @@
+<script type="text/javascript">
+var bIsFirebugReady = (!!window.console && !!window.console.log);
+
+$(document).ready(
+	function (){
+		
+		// bind the recalc function to the quantity fields
+		$("input[name^=qty_item_]").bind("keyup", recalc);
+		$("input[name^=price_item_]").bind("keyup", recalc);
+		$("input[name^=zpa_item_]").bind("keyup", recalc);
+		// run the calculation function now
+		recalc();
+	}
+);
+
+function recalc(){
+	$("[id^=total_item]").calc(
+		// the equation to use for the calculation
+		"(qty * (price * 0.01)) + ((qty * price * 0.01)*zpa*0.01)",
+		// define the variables used in the equation, these can be a jQuery object
+		{
+			qty: $("input[name^=qty_item_]"),
+			price: $("[id^=price_item_]"),
+			zpa: $("[id^=zpa_item_]")
+		},
+		// define the formatting callback, the results of the calculation are passed to this function
+		function (s){
+			// return the number as a dollar amount
+			return "￥" + s.toFixed(2);
+		},
+		// define the finish callback, this runs after the calculation has been complete
+		function ($this){
+			// sum the total of the $("[id^=total_item]") selector
+			var sum = $this.sum();
+			
+			$("#grandTotal").text(
+				// round the results to 2 digits
+				"￥" + sum.toFixed(2)
+			);
+		}
+	);
+}
+</script>
+

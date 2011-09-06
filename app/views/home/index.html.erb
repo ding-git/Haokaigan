@@ -17,6 +17,11 @@
 			除此之外，我还能做什么？
 		</div>
 		<div class="content_warp">
+			<h2>哪些工具可以用？</h2></br>
+			税务成本计算器 | 营业税计算器 | 人力成本计算器 | 企业财务事务提醒
+		</div>
+		
+		<div class="content_warp">
 			<h2>最近话题更新</h2></br>
 			<%= @note.que %></br>
 			<%= @note.ans %>
@@ -28,10 +33,12 @@
 	</div>
 	<div class="content_right">
 		<% @establishes.each do |establish| %>
-		<div class="red"><%= link_to establish.name,establish %></div>
-		<% establish.chapter.each do |chapter| %>
-		<div class="top"><%= link_to chapter.name,'/' %></div>
-		<% end %>
+		<div class="red"><%= link_to establish.name,'javascript:;' %></div>
+		<div class="content-top">
+			<% establish.chapter.each do |chapter| %>
+			<div class="top"><%= link_to chapter.name,'/' %></div>
+			<% end %>
+		</div>
 		<% end  %>
 		
 	</div>

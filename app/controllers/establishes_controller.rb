@@ -27,6 +27,7 @@ class EstablishesController < ApplicationController
       @tips           = @chapter.first.tip
       @partners       = @chapter.first.partner
       params[:more]   ||= @chapter.first.id
+      @current_chapter = @chapter.find(params[:more])
     else
       @chapter_one    = []
       @note           = []
@@ -53,6 +54,7 @@ class EstablishesController < ApplicationController
       @note           = @chapter.find(params[:more]).note
       @tips           = @chapter.find(params[:more]).tip
       @partners       = @chapter.find(params[:more]).partner
+      @current_chapter = @chapter.find(params[:more])
     end
     
     respond_to do |format|

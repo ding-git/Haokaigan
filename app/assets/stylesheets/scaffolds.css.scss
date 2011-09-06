@@ -49,9 +49,13 @@ div{
 		color:$link-top-blue;
 		}
 	}
+	&.content-top{
+		display: none;
+	}
 	&.red {
 	background-color: $main-red;
-	border: 0px;
+	border-bottom: 1px solid #222222;
+	border-right: 1px solid #222222;
 	padding: 5px;
 		a{
 		color:$main-white;
@@ -72,7 +76,6 @@ div{
 	}
 	&.content_warp {
 	overflow: auto;
-	background-color: #F4F4F4;
 	border: 1px solid #CFCFCF;
 	min-width: 600px;
 	background-color: $main-white;
@@ -160,11 +163,11 @@ div{
 			height: 50px;
 			margin:0 5px 0 -5px;
 	}
-	#back-right{
+	&.back-right{
 		float:right;
 		background-color: $main-grey;
-		width:50px;
-		height: 25px;
+		width:80px;
+		height: 26px;
 		margin:-5px -5px 0 0;
 		border-left: 1px solid $main-grey-round;
 		border-bottom: 1px solid $main-grey-round;
@@ -174,6 +177,42 @@ div{
 		font-size:12px;
 		color: $main-black;
 		}
+	}
+	#back-right-xmenu{
+		display:none;
+		position:absolute;
+		float:right;
+		background-color: $main-grey;
+		margin: 17px 522px;
+		width:150px;
+		border: 1px solid $main-grey-round;
+		text-align: center;
+		a{
+		font-size:12px;
+		color: $main-black;
+		}
+	}
+	&.content_topic {
+	overflow: auto;
+	min-width: 600px;
+	background-color: $main-white;
+	margin: 5px;
+	padding: 5px;
+		.content_topic_main {
+		    float: left;
+		    width: 100px;
+		}
+		.content_topic_desc {
+		    margin: 0 0 0 120px;
+			a{
+				color: $link-top-blue;
+				font-size: 14px;
+				h1{
+					font-size: 18px;
+				}
+			}
+		}
+
 	}
 }
 
