@@ -1,3 +1,4 @@
+# coding: utf-8
 class NotesController < ApplicationController
   # GET /notes
   # GET /notes.json
@@ -52,6 +53,7 @@ class NotesController < ApplicationController
 
     respond_to do |format|
       if @note.save
+        @log = Log.create(:l_type => '新关键词创建',:title => @note.que, :content => @note.ans, :user_id => current_user.id , :note_id => @note.id)
         format.html { redirect_to :back, notice: 'Note was successfully created.' }
         format.json { render json: @note, status: :created, location: @note }
       else
@@ -69,8 +71,7 @@ class NotesController < ApplicationController
 
     respond_to do |format|
       if @note.update_attributes(params[:note])
-        @log = Log.new(:title => @note.que, :content => @note.ans, :user_id => current_user.id , :note_id => params[:id])
-        @log.save
+        @log = Log.create(:l_type => '关键词编辑',:title => @note.que, :content => @note.ans, :user_id => current_user.id , :note_id => params[:id])
     
         format.html { redirect_to :back, notice: 'Note was successfully updated.' }
         format.json { head :ok }

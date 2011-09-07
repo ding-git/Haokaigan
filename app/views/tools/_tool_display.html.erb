@@ -7,6 +7,7 @@ $(document).ready(
 		// bind the recalc function to the quantity fields
 		$("input[name^=qty_item_]").bind("keyup", recalc);
 		$("input[name^=price_item_]").bind("keyup", recalc);
+		$("input[name^=jianei_item_]").bind("keyup", recalc);
 		$("input[name^=zpa_item_]").bind("keyup", recalc);
 		// run the calculation function now
 		recalc();
@@ -21,7 +22,7 @@ function recalc(){
 		{
 			qty: $("input[name^=qty_item_]"),
 			price: $("[id^=price_item_]"),
-			zpa: $("[id^=zpa_item_]")
+			zpa: $("[id^=zpa_item_]"),
 		},
 		// define the formatting callback, the results of the calculation are passed to this function
 		function (s){

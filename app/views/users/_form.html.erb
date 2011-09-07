@@ -38,6 +38,7 @@
 	<dd>
   </div>
 
+<% if action_name() == 'new'  %>
   <div class="field">
 	<dt class="xen xdn">
 	    <%= f.label '密码' %><br />	
@@ -55,6 +56,8 @@
     <%= f.password_field :password_confirmation %>
 	<dd>
   </div>
+
+<% end %>
 
   <div class="actions">
     <%= f.submit :value => '修改',:id => 'edit_submit' %>

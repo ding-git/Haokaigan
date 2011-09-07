@@ -1,51 +1,11 @@
 <div class="content_main">
-	<div class="content_left">
-		<div class="content_warp">
-			<p><%= link_to '为什么知乎要把一部分精力投入到客户端开发上，而不是开放 API？','/' %></p>
-
-			因为是刚开始尝试，api还不够稳定，也还未清楚每个api到底要定义成什么样子，变化也会比较频繁。自己先做app是这方面的一个尝试和验证。当然还有开放api后会带来的版权问题也还没考虑清楚。等api比较稳定，不会频繁变动时，以及版权问题考虑清楚后，会逐步开放api</br>
-			<div class='black_link'>
-				<li><%= link_to '编辑','/' %> -</li>
-				<li><%= link_to '删除','/' %> -</li>
-				<li><%= link_to '知乎','/' %></li>
+		<% @establishes.each do |establish| %>
+			<div class="content_left">
+		</br>
+		<div class="content_unit_name"><%= establish.name %></div>
+		<% establish.chapter.each do |chapter| %>
+		<div class="content_unit_desc"><%= link_to chapter.name, establish_path(establish) %></div>
+		<% end %>
 			</div>
-		</div>
-	</div>
-	<div class="content_right">
-		aaa
-	</div>
+		<% end %>
 </div>
-
-
-
-浏览器判断：<%= '这是Firefox' if request.env['HTTP_USER_AGENT'].downcase.include?('firefox') %></br>
-浏览器判断：<%= '这是safari' if request.env['HTTP_USER_AGENT'].downcase.include?('safari') %></br>
-
-<%= request.env['HTTP_USER_AGENT'] %></br>
-<%= request.env["REQUEST_URI"] %>
-
-<h1>Listing establishes</h1>
-
-<table>
-  <tr>
-    <th>Name</th>
-    <th>Description</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
-
-<% @establishes.each do |establish| %>
-  <tr>
-    <td><%= establish.name %></td>
-    <td><%= establish.description %></td>
-    <td><%= link_to 'Show', establish %></td>
-    <td><%= link_to 'Edit', edit_establish_path(establish) %></td>
-    <td><%= link_to 'Destroy', establish, confirm: 'Are you sure?', method: :delete %></td>
-  </tr>
-<% end %>
-</table>
-
-<br />
-
-<%= link_to 'New Establish', new_establish_path %>

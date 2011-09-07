@@ -7,14 +7,3 @@
 //= require jquery
 //= require jquery_ujs
 //= require_tree .
-$(document).ready(function(){ 
-	$(".red").click(function()
-	{
-	    $(this).next("div.content-top").slideToggle(300).siblings("div.content-top").slideUp("slow");
-	    $(this).siblings();
-	});
-	$("div.back-right").hover(function()
-	{
-	    $(this).next().slideToggle(0).siblings("div.content-top").slideUp("slow");
-	});
-});
