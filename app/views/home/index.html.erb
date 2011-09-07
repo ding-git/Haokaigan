@@ -31,6 +31,22 @@
 			<h2>提一个问题</h2></br>
 		</div>
 	</div>
+	
+	
+	<script>
+		$(document).ready(function(){ 
+			$(".red").click(function()
+			{
+			    $(this).next("div.content-top").slideToggle(300).siblings("div.content-top").slideUp("slow");
+			    $(this).siblings();
+			});
+			$("div.back-right").hover(function()
+			{
+			    $(this).next().slideToggle(0).siblings("div.content-top").slideUp("slow");
+			});
+		});
+	</script>
+	
 	<div class="content_right">
 		<% @establishes.each do |establish| %>
 		<div class="red"><%= link_to establish.name,'javascript:;' %></div>

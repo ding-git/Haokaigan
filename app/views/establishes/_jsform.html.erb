@@ -1,22 +1,24 @@
 <div id='clear_form'>
-<%= form_for( @note) do |f| %>
-  <div class="field">
-    <%= f.hidden_field :chapter_id, :value => params[:id] %>
-  </div>
-  <div class="field">
-    <%= f.label :que %><br />
-    <%= f.text_field :que %>
-  </div>
-  <div class="field">
-    <%= f.label :ans %><br />
- 	<%= f.cktext_area :ans, :toolbar => 'Basic', :width => 630, :height => 400 %>
-  </div>
-  <div class="field">
-    <%= f.label :img_url %><br />
-    <%= f.text_field :img_url %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
-<% end %>
+<div class="edit_field">
+	<%= form_for( @note) do |f| %>
+	  <div class="field">
+	    <%= f.hidden_field :chapter_id, :value => params[:id] %>
+	  </div>
+	  <div class="field">
+	    <%= f.label :que %><br />
+	    <%= f.text_field :que %>
+	  </div>
+	  <div class="field">
+	    <%= f.label :ans %><br />
+	 	<%= f.cktext_area :ans, :toolbar => 'Basic', :width => 630, :height => 400 %>
+	  </div>
+	  <div class="field">
+	    <%= f.label :img_url %><br />
+	    <%= f.text_field :img_url %>
+	  </div>
+	  <div class="actions">
+	    <%= f.submit %>
+	  </div>
+	<% end %>
+</div>
 </div>

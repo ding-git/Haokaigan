@@ -10,9 +10,9 @@
       </ul>
     </div>
   <% end %>
-
+<div class="edit_field">
   <div class="field">
-    <%= f.number_field :chapter_id, :value => params[:more] %>
+    <%= f.hidden_field :chapter_id, :value => params[:more] %>
   </div>
   <div class="field">
     <%= f.label :que %><br />
@@ -25,4 +25,5 @@
   <div class="actions">
     <%= f.submit %>
   </div>
+</div>
 <% end %>

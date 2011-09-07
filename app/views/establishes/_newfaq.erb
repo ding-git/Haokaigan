@@ -40,7 +40,7 @@
 	<div class='black_link'>
 		<li><%= link_to '讨论（20）','/' %> -</li>
 		<li><%= link_to '纠错','/' %> -</li>
-		<li><%= link_to '编辑',edit_note_path(note,:more => params[:more]),:remote => true %> -</li>
+		<li><%= link_to '编辑',edit_note_path(note,:more => params[:more]),:remote => true, :id => "edit_id_#{note.id}" %> -</li>
 		<li><%= link_to '删除','/' %> -</li>
 		<li><%= link_to '知乎','/' %></li>
 		<li id='content_time'><%= note.updated_at.to_formatted_s(:short) %></li>

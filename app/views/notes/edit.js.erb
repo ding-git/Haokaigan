@@ -1,2 +1,19 @@
+$("#edit_window_<%= @note.id %>").html("<%= escape_javascript(render(:partial => 'form')) %>");
 
-$("#edit_window_<%= @note.id %>").append("<%= escape_javascript(render(:partial => 'form')) %>");
+$("[id^=edit_id_]").click(function (){
+	$(".edit_field").remove();
+	$("#edit_id_<%= @note.id %>").css({
+										"background-color":"#FFFFFF",
+										"padding":"0"
+									 });
+});
+$("#edit_id_<%= @note.id %>").css({
+									"background-color":"#FEF7CB",
+									"padding":"5px"
+								 });
+
+// $("#edit_id_<%= @note.id %>").click(function () { 
+//   $(this).removeAttr("data-remote");
+//   $(this).removeAttr("href");	
+// 
+// });
