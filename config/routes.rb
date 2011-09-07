@@ -1,5 +1,7 @@
 Haokaigan::Application.routes.draw do
   
+  resources :discussions
+
   resources :logs
 
   resources :tools

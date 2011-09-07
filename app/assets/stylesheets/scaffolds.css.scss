@@ -249,6 +249,11 @@ div{
 		}
 
 	}
+	&.discussion_windows{
+		margin:5px;
+		padding:5px;
+				border: 1px solid $main-grey-round;
+	}
 	
 }
 

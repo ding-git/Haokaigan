@@ -1,0 +1,10 @@
+
+<% floor = 0  %>
+<% @note.discussion.each do |discussion| %>
+<div class="discussion_windows" id="discussion_window_<%= @note.id %>">
+#<%= floor += 1  %></br>
+<%= discussion.content %></br>
+<%= image_tag '/images/user.png' %> <%= discussion.user.name %> <%= image_tag '/images/clock.png' %> <%= discussion.created_at.to_date %>
+</br>
+</div>
+<% end %>
