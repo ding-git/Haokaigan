@@ -48,6 +48,7 @@ class DiscussionsController < ApplicationController
 
     respond_to do |format|
       if @discussion.save
+        @log = Log.create(:l_type => 'Add discussion',:content => @discussion.content, :user_id => current_user.id , :note_id => @discussion.note.id)
         format.html { redirect_to @discussion, notice: 'Discussion was successfully created.' }
         format.json { render json: @discussion, status: :created, location: @discussion }
       else

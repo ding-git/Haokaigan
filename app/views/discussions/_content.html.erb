@@ -8,3 +8,21 @@
 </br>
 </div>
 <% end %>
+
+<div class="discussion_windows" id="discussion_window_<%= @note.id %>">
+<%= form_for(@discussion) do |f| %>
+
+  <div class="field">
+    <%= f.text_field :note_id,:value => params[:note] %>
+  </div>
+  <div class="field">
+    <%= f.hidden_field :user_id,:value => current_user.id %>
+  </div>
+  <div class="field">
+    <%= f.text_area :content,:rows => 3,:width => '600px' %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
+</div>

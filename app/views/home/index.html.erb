@@ -1,15 +1,10 @@
 <div class="content_main">
+	<div id="index_title">
+		<div id="tanmeng_big_banner"></div>
+		<div id="index_features"></div>
+	</div>
+
 	<div class="content_left">
-		<div class="content_warp">
-			<div id="index_title">
-				<h1 id='index_title_submit'>最实用的注册一家创业公司所需要的帮助 - 全部免费</h1></br>
-			</div>
-			<div id="index_title">
-			在探梦，你可以找到你所需要的成立创业公司的信息。</br>
-			从基础的工商局注册、银行账户申请，乃至日常的财务处理、公司融资问题。</br>
-			从右侧的菜单选择你需要的信息！
-			</div>
-		</div>
 		<div class="content_warp">
 			<h2>如何入手</h2></br>
 			如果您是初学者，请您阅读《初级教程》。</br>
@@ -48,6 +43,7 @@
 	</script>
 	
 	<div class="content_right">
+		<div class="red-hat">快速导航</div>
 		<% @establishes.each do |establish| %>
 		<div class="red"><%= link_to establish.name,'javascript:;' %></div>
 		<div class="content-top">
@@ -56,6 +52,6 @@
 			<% end %>
 		</div>
 		<% end  %>
-		
+	<div class="red-footer"></div>
 	</div>
 </div>

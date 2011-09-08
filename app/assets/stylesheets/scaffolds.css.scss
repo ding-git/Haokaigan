@@ -61,6 +61,27 @@ div{
 		color:$main-white;
 		}
 	}
+	&.red-hat{
+	color: #CC0000;
+	font-size: 18px;
+	background-color: #FEF7CB;
+	padding: 5px;
+	border-top: 1px solid #999999;
+	border-left: 1px solid #999999;
+	border-right: 1px solid #999999;
+	border-bottom: 1px solid #222222;
+	border-radius: 5px 5px 0px 0px;
+	}
+	&.red-footer{
+	color: #CC0000;
+	font-size: 18px;
+	background-color: #FEF7CB;
+	padding: 5px;
+		border-bottom: 1px solid #999999;
+		border-left: 1px solid #999999;
+		border-right: 1px solid #999999;
+	border-radius: 0px 0px 5px 5px;
+	}
 	&.content_main {
 		width: 960px;
 	}
@@ -133,19 +154,47 @@ div{
 		}
 	}
 	&.content_form{
-		width: 300px;
-		text-align: center;		
+		width: 800px;
+		text-align: center;	
+		label{
+			margin: 5px;
+		}
+		#lg_login{
+			color: #FFFFFF;
+		    background: #336699;
+			border-radius: 10px 10px 10px 10px;
+		    border: 0 none;
+		    cursor: pointer;
+		    height: 30px;
+		    width: 84px;
+			font-size:14px;
+
+		}	
+		#textinput_login{
+			background-clip: padding-box;
+		    background-color: #FFFFFF;
+		    border: 1px solid $main-grey;
+			border-radius: 10px 10px 10px 10px;
+		    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.27), 1px 1px 2px rgba(0, 0, 0, 0.443) inset;
+		    color: #888888;
+		    cursor: text;
+		    display: inline-block;
+		    ime-mode: disabled;
+		    margin: 0 0 5px;
+		    padding: 8px 5px;
+		    width: 180px;
+		}
 	}
 	
 	&.content_form .field{
-		float:right;
+		margin:20px;
 		color:red;
 	}
 	&.content_logo{
 				text-align: center;		
 	}
 	#index_title{
-		padding:50px 0 0 0 ;
+		padding:20px 0 0 0 ;
 		text-align: center;	
 				color: $main_blue;
 	}
@@ -254,7 +303,17 @@ div{
 		padding:5px;
 				border: 1px solid $main-grey-round;
 	}
-	
+	#tanmeng_big_banner{
+		background:#385975 url(/assets/tanmeng.png);
+		width: 948px;
+		height: 337px;
+	}
+	#index_features{
+		margin-top: 5px;
+		background:#FFFFFF url(/assets/index_features.png);
+		width: 948px;
+		height: 56px;
+	}
 }
 
 .csGery{

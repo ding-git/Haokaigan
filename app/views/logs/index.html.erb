@@ -7,7 +7,8 @@
 				<span id='log_id'>ID:<%= log.id %></span>
 				<span id='log_id'>用户：<%= log.user.name %></span>
 			    <span id='log_type'><%= log.l_type %></span>
-			    <p>主题：<%= log.title %></p>
+			    <p>主题：<%= log.note.que if !log.note.nil? %>
+			<%= log.title %></p>
 				<p>内容：<%= log.content %></p>
 		</div>
 	</div>

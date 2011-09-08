@@ -1,1 +1,5 @@
+$("[id^=add_discussion_]").click(function (){
+	$(".discussion_windows").remove();
+});
+
 $("#edit_window_<%= @note.id %>").html("<%= escape_javascript(render(:partial => 'content')) %>");
