@@ -1,5 +1,5 @@
 class PagesController < ApplicationController
-  before_filter :verification, :except => [:index]
+  before_filter :verification
   
   # GET /pages
   # GET /pages.json

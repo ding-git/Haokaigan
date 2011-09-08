@@ -1,3 +1,5 @@
+<div class="content_main">
+
 <%= form_for(@user) do |f| %>
   <% if @user.errors.any? %>
     <div id="error_explanation">
@@ -11,55 +13,37 @@
     </div>
   <% end %>
 
+<div id="new_user_style">
   <div class="field">
-	<dt class="xen xdn">
-	    <%= f.label :姓名 %><br />	
-	</dd>
-	<dd class="xbn">
-    <%= f.text_field :name %>
-	<dd>
+	    <%= f.label :姓名 %> <%= f.text_field :name %>
   </div>
 
+<% if signed_in? %>
   <div class="field">
-	<dt class="xen xdn">
-	    <%= f.label :个人简介 %><br />	
-	</dd>
-	<dd class="xbn">
-    <%= f.text_field :bio %>
-	<dd>
+	    <%= f.label :个人简介 %> <%= f.text_field :bio %>
   </div>
-
-  <div class="field">
-	<dt class="xen xdn">
-	    <%= f.label :电子邮件 %><br />	
-	</dd>
-	<dd class="xbn">
-    <%= f.text_field :email,:disabled => 'true' %>
-	<dd>
-  </div>
-
-<% if action_name() == 'new'  %>
-  <div class="field">
-	<dt class="xen xdn">
-	    <%= f.label '密码' %><br />	
-	</dd>
-	<dd class="xbn">
-    <%= f.password_field :password %>
-	<dd>
-  </div>
-
-  <div class="field">
-	<dt class="xen xdn">
-	    <%= f.label '确认密码' %><br />	
-	</dd>
-	<dd class="xbn">
-    <%= f.password_field :password_confirmation %>
-	<dd>
-  </div>
-
 <% end %>
+
+  <div class="field">
+	    <%= f.label :电子邮件 %> <%= f.text_field :email %>
+  </div>
+
+
+  <div class="field">
+	    <%= f.label '密码' %>	
+    <%= f.password_field :password %>
+  </div>
+
+  <div class="field">
+	    <%= f.label '确认密码' %>
+    <%= f.password_field :password_confirmation %>
+  </div>
+
 
   <div class="actions">
-    <%= f.submit :value => '修改',:id => 'edit_submit' %>
+    <%= f.submit :value => '提交',:id => 'edit_submit' %>
   </div>
 <% end %>
+</div>
+
+</div>

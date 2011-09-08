@@ -1,11 +1,42 @@
-<div class="content_main">
-		<% @establishes.each do |establish| %>
-			<div class="content_left">
-		</br>
-		<div class="content_unit_name"><%= establish.name %></div>
-		<% establish.chapter.each do |chapter| %>
-		<div class="content_unit_desc"><%= link_to chapter.name, establish_path(establish) %></div>
-		<% end %>
+<div class="content_main">	
+	<div class="content_left">
+		<div class="es_subject">
+			
+			<span id="ess_center">创业导航</span>
+			<% es = 0 %>
+			<% @establishes.each do |establish| %>
+			<% es += 1 %>
+			<%= link_to establish.name, establish_path(establish), :id =>'ess_id_'+es.to_s  %>
+			<% end %>
+		</div>
+	</div>
+	
+	
+	
+		<script>
+			$(document).ready(function(){ 
+				$(".red").click(function()
+				{
+				    $(this).next("div.content-top").slideToggle(300).siblings("div.content-top").slideUp("slow");
+				    $(this).siblings();
+				});
+				$("div.back-right").hover(function()
+				{
+				    $(this).next().slideToggle(0).siblings("div.content-top").slideUp("slow");
+				});
+			});
+		</script>
+
+		<div class="content_right">
+			<div class="red-hat">快速导航</div>
+			<% @establishes.each do |establish| %>
+			<div class="red"><%= link_to establish.name,'javascript:;' %></div>
+			<div class="content-top">
+				<% establish.chapter.each do |chapter| %>
+				<div class="top"><%= link_to chapter.name,'/' %></div>
+				<% end %>
 			</div>
-		<% end %>
+			<% end  %>
+		<div class="red-footer"></div>
+		</div>
 </div>

@@ -1,5 +1,10 @@
 <div id="blank">&nbsp;</div>
 
 <div class="footer-wrap">
-	<div id="footer-font"> <%= link_to '全局日志', '/logs' %> | <%= Settings.copyright_name %></div>
+	<div id="footer-font"> 
+	<% if signed_in? %>
+	<%= link_to '全局日志', '/logs' %> | 
+	<% end %>
+	<%= Settings.copyright_name %></div>
+	
 </div>

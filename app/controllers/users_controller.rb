@@ -16,9 +16,13 @@ class UsersController < ApplicationController
   def show
     @user = User.find(params[:id])
 
-    respond_to do |format|
-      format.html # show.html.erb
-      format.json { render json: @user }
+    if current_user == @user
+      respond_to do |format|
+        format.html # show.html.erb
+      end
+    else
+    redirect_to root_path
+    
     end
   end
 
@@ -29,13 +33,20 @@ class UsersController < ApplicationController
 
     respond_to do |format|
       format.html # new.html.erb
-      format.json { render json: @user }
     end
   end
 
   # GET /users/1/edit
   def edit
     @user = User.find(params[:id])
+    if current_user == @user
+      respond_to do |format|
+        format.html # show.html.erb
+      end
+    else
+    redirect_to root_path
+    
+    end
   end
 
   # POST /users

@@ -1,4 +1,5 @@
 class ToolsController < ApplicationController
+  before_filter :verification
   # GET /tools
   # GET /tools.json
   def index

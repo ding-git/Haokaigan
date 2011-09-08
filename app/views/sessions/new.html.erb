@@ -13,7 +13,7 @@
 	  </div>
 		<div class="field">
 		  <%= check_box_tag :remember_me, 1, params[:remember_me] %>
-		  <%= label_tag '记住我' %> <%= f.submit "登陆",:id => 'lg_login' %>
+		  <%= label_tag '记住我' %> <%= f.submit "登陆",:id => 'lg_login' %> <%= link_to '注册新账号？', new_user_path %>
 		</div>
 	</div>
 	<% end %>

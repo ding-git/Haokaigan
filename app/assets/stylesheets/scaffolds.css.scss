@@ -84,6 +84,17 @@ div{
 	}
 	&.content_main {
 		width: 960px;
+		.field{
+			font-size:14px;
+			padding:10px;
+			margin:10px;
+			input{
+				padding: 2px;
+				border-radius: 10px 10px 10px 10px;
+				float:right;
+				margin-right:570px;
+			}
+		}
 	}
 	&.content_left {
 	    float: left;
@@ -314,6 +325,75 @@ div{
 		width: 948px;
 		height: 56px;
 	}
+	#new_user_style{
+		width:900px;
+		float: left;
+		margin: 10px;
+		padding: 10px;
+		border: 1px solid $main-grey-round;
+	}
+	#edit_submit{
+		color: #FFFFFF;
+	    background: #336699;
+		border-radius: 10px 10px 10px 10px;
+	    border: 0 none;
+	    cursor: pointer;
+	    height: 30px;
+	    width: 84px;
+		font-size:14px;
+	}
+	table{
+		margin:10px;
+		padding:5px;
+		th{
+			font-size:14px;
+		}
+		td{
+		padding:5px;
+		border: 1px solid #DCDCDC;
+			&.name{
+				width:80px;
+			}
+			&.bio{
+			width:200px;
+			}
+	}
+	}
+	&.es_subject{
+		width:617px;
+		height:240px;
+		background:#FFFFFF url(/assets/es_subject.png);
+		#ess_center{
+			position:relative;
+			left:260px;
+			top:110px
+		}
+		#ess_id_1{
+			position:relative;
+			left:350px;
+			top:30px
+		}
+		#ess_id_2{
+			position:relative;
+			left:278px;
+			top:110px
+		}
+		#ess_id_3{
+			position:relative;
+			left:110px;
+			top:190px
+		}
+		#ess_id_5{
+			position:relative;
+			left:-420px;
+			top:50px
+		}
+		#ess_id_4{
+			position:relative;
+			left:-350px;
+			top:170px
+		}
+	}
 }
 
 .csGery{
@@ -371,6 +451,7 @@ div{
 }
 
 h1{
+	padding-top:5px;
 	#index_title_submit{
 		font-size: 40px;
 	}

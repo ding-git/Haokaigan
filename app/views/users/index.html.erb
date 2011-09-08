@@ -1,35 +1,23 @@
-<h1>Listing users</h1>
+<div class="content_main">
+<h1>目前用户总数: <%= @users.count %></h1>
 
 <table>
   <tr>
-    <th>Name</th>
-    <th>Bio</th>
-    <th>Deleted</th>
-    <th>Credible</th>
-    <th>Admin</th>
-    <th>Email</th>
-    <th>Encrypted password</th>
-    <th></th>
-    <th></th>
-    <th></th>
+    <th>用户名</th>
+    <th>个人简介</th>
+    <th>注册时间</th>
   </tr>
 
 <% @users.each do |user| %>
   <tr>
-    <td><%= user.name %></td>
-    <td><%= user.bio %></td>
-    <td><%= user.deleted %></td>
-    <td><%= user.credible %></td>
-    <td><%= user.admin %></td>
-    <td><%= user.email %></td>
-    <td><%= user.encrypted_password %></td>
-    <td><%= link_to 'Show', user %></td>
-    <td><%= link_to 'Edit', edit_user_path(user) %></td>
-    <td><%= link_to 'Destroy', user, confirm: 'Are you sure?', method: :delete %></td>
+    <td class="name"><%= image_tag '/images/user.png' %>
+<%= user.name %></td>
+    <td class="bio"><%= user.bio %></td>
+    <td><%= user.created_at.to_date %></td>
   </tr>
 <% end %>
 </table>
 
 <br />
 
-<%= link_to 'New User', new_user_path %>
+</div>
